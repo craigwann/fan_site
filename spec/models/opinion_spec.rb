@@ -8,10 +8,10 @@ describe User do
   end
 end
 
-describe User do
+describe Song do
   it do
-    should have_many(:songs).
+    should have_many(:users).
       through(:opinions).
-      class_name('Song')
+      class_name('User')
   end
 end
