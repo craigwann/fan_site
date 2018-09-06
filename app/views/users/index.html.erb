@@ -1,5 +1,8 @@
 <h1>Users</h1>
 
+<h2>See user with most songs</h2>
+<%= User.most_songs[0].name %>
+
 <ul>
   <% @users.each do |user| %>
     <li><%= link_to user.name, user_path(user) %></li>

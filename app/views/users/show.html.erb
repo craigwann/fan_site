@@ -7,7 +7,7 @@
   <ul>
     <% @user.songs.each do |song| %>
     <li>
-      <%= song.title %> -
+      <%= song.title %> by <%= song.artist %>
       <%= link_to "Edit", edit_user_song_path(@user, song) %> -
       <%= link_to "Delete", user_song_path(@user, song),
                       :data => {:confirm => "Are you sure?",
@@ -28,4 +28,5 @@
         :data => {:confirm => "You sure?",
                   :method => "delete"} %></p>
 
+<p><%= link_to "most songs per user", users_path %></p>
 <p><%= link_to "return to users", users_path %></p>
